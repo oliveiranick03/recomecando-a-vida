@@ -1,0 +1,40 @@
+/* Este código contém as regras CSS customizadas utilizadas no seu projeto.
+O site atualmente usa Tailwind CSS e estas regras estão inseridas na tag <style> do index.html.
+Se você fosse usar um arquivo CSS externo, este seria o conteúdo.
+*/
+
+/* Importação da fonte Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Regra para garantir que os ícones tenham um tamanho consistente */
+.icon-container {
+    width: 60px; 
+    height: 60px;
+}
+
+/* Regra para o fundo gradiente da seção Hero */
+/* O Tailwind já define as variáveis --tw-colors-primary e --tw-colors-accent */
+.hero-bg {
+    background: linear-gradient(135deg, var(--tw-colors-primary) 0%, var(--tw-colors-accent) 100%);
+}
+
+/* * MELHORIAS ADICIONAIS: Transições Suaves
+* Aplicamos transição suave para todas as propriedades nos elementos interativos
+* (links e botões) para deixar o visual mais fluido ao passar o mouse.
+*/
+button, a {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Garantindo que o corpo do site use a fonte Inter */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Adiciona uma transição sutil ao background para evitar saltos visuais */
+    transition: background-color 0.4s ease;
+}
+
+/* Estilo para a barra de navegação (Header) */
+header {
+    /* Adiciona um z-index alto para garantir que fique por cima de tudo ao rolar */
+    z-index: 100;
+}
